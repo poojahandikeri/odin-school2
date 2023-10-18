@@ -1,61 +1,31 @@
-body{
-    background-color: palevioletred;
-}
-
-
-
-.main-2{
-    display: flex;
-    justify-content: center;
-}
-
-
-
-.main{
+.page-header{
+    grid-area:nav-header;
+    height: 50px;
     background-color: gray;
-    border: 2px solid black;
+    padding: 15px;
+    
+}
+.page-body{
+    grid-area:main-body;
+    background-color: rgb(195, 201, 118);
+    padding: 15px;
+    height: 400px;
+    
+}
+.side-bar{
+    grid-area:nav-side-bar;
+    background-color: rgb(128, 189, 120);
+    padding: 15px;
+    
+}
+.page-footer{
+    grid-area:copy-right-footer;
+    background-color: rgb(20, 7, 19);
+    padding: 15px;
+}
+.page{
     display: grid;
-    height: 500px;
-    width: 500px;
-}
-#div1{
-   grid-row-start: 1;
-   grid-row-end: 3;
-}
-#div2{
-    grid-row-start: 4;
-    grid-row-end: 6;
- }
-
-
-.grid-item{
-    background-color: greenyellow;
-    border: 2px solid black;
-}
-.grid{
-    display: flex;
-    justify-content: center;
-
-}
-.grid-container{
-    background-color: rgb(183, 201, 21);
-    border: 2px solid rgb(99, 4, 4);
-    display: grid;
-    height: 500px;
-    width: 500px;
-    margin: 30px;
-}
-.box{
-    background-color: greenyellow;
-    border: 2px solid black;
-}
-
-
-.grid-item2 {
-    grid-row-start: 2;
-    grid-row-end: 5;
-  
-}
-.grid-item1{
-    grid-row-start: 5 / span 9;
+    grid-template-areas: "nav-header nav-header nav-header nav-side-bar"
+    "main-body main-body . nav-side-bar"
+    "copy-right-footer copy-right-footer copy-right-footer copy-right-footer";
 }
